@@ -1,0 +1,15 @@
+<h1>{{ event.title }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% for comment in event.comment_set.all %}
+    <p>{{comment.comment_text}}</p>
+{% endfor %}
+
+<form action="{% url 'afisha:add_comment' event.id %}" method="post">
+{% csrf_token %}
+
+<textarea name="comment" rows="8" cols="80"></textarea>
+
+<input type="submit" value="Comment" />
+</form>
