@@ -1,4 +1,7 @@
 /* Space out content a bit */
+* {
+  box-sizing: border-box;
+}
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -38,7 +41,7 @@ body {
   .container {
     max-width: 730px;
   }
-  .img-event {
+  .event {
     height: 300px;
   }
   .event-wrapper {
@@ -47,7 +50,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .img-event {
+  .event {
     height: 200px;
   }
 }
@@ -58,29 +61,74 @@ body {
 
 /*---Event---------*/
 .event {
-  text-align: center;
-  padding-bottom: 20px;
+  text-align: left;
+  margin-bottom: 20px;
   position: relative;
-}
-.img-event {
+  display: flex;
+  flex-direction: column;
   width:100%;
   background-position: center;
   background-size: cover;
   border-radius: 3px;
   background-image: url('../img/безенги-1.jpg');
 }
+
 .date-label {
     position: absolute;
     top: 20px;
     z-index: 2;
-    display: inline-block;
+    background-color: #dc4e41;
+    color: #fff;
     min-width: 80px;
     padding: 8px 12px 8px 10px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
-    color: #fff;
     border-radius: 0 40px 40px 0;
-    opacity: .8;
+
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 20px;
+    color: #fff;
+}
+.event_title {
+    display: block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    max-height: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color:  #fff;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+  .event_text {  
+    overflow: hidden;
+    line-height: 18px;
+    word-wrap: break-word;
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+}
 /*-----About------------------*/
 .doc-section {
   margin-bottom: 20px;
