@@ -1,0 +1,100 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Roboto,sans-serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+  .img-event {
+    height: 300px;
+  }
+  .event-wrapper {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .img-event {
+    height: 200px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/*---Event---------*/
+.event {
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+.img-event {
+  width:100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 3px;
+  background-image: url('../img/безенги-1.jpg');
+}
+.date-label {
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    display: inline-block;
+    min-width: 80px;
+    padding: 8px 12px 8px 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 40px 40px 0;
+    opacity: .8;
+/*-----About------------------*/
+.doc-section {
+  margin-bottom: 20px;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
